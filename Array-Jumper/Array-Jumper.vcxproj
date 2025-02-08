@@ -133,6 +133,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="source\Player\PlayerService.cpp" />
+    <ClCompile Include="source\Player\PlayerController.cpp" />
     <ClCompile Include="source\Player\PlayerView.cpp" />
     <ClCompile Include="source\Player\PlayerModel.cpp" />
     <ClCompile Include="source\Global\Config.cpp" />
@@ -172,6 +174,8 @@
     <ClInclude Include="header\Global\ServiceLocator.h" />
     <ClInclude Include="header\Player\PlayerModel.h" />
     <ClInclude Include="header\Player\PlayerView.h" />
+    <ClInclude Include="header\Player\PlayerController.h" />
+    <ClInclude Include="header\Player\PlayerService.h" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="assets\fonts\bubbleBobble.ttf" />

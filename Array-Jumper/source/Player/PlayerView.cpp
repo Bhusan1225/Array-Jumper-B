@@ -1,6 +1,9 @@
 #include "../../header/Player/PlayerView.h"
 #include "../../header/Global/Config.h" 
 #include "../../header/Global/ServiceLocator.h" 
+#include "../../header/Player/PlayerController.h"
+#include "../../header/Player/PlayerModel.h"
+
 
 using namespace UI::UIElement;
 using namespace Global;
@@ -8,8 +11,9 @@ using namespace Global;
 namespace Player 
 {
 
-	PlayerView::PlayerView()
+	PlayerView::PlayerView(PlayerController* controller)
 	{
+		player_controller = controller;
 		game_window = nullptr;
 		player_image = new ImageView();
 
@@ -25,12 +29,17 @@ namespace Player
 
 	void PlayerView::update()
 	{
-		//Yet to implement
+		updatePlayerPosition();
 	}
 
 	void PlayerView::render()
 	{
-		drawPlayer();
+		switch (player_controller->getPlayerState())
+		{
+		case PlayerState::ALIVE:
+			drawPlayer();
+			break;
+		}
 	}
 
 	void PlayerView::loadPlayer()

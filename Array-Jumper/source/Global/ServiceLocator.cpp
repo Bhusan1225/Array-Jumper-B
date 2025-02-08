@@ -43,12 +43,21 @@ namespace Global
 		graphic_service->update();
 		event_service->update();
 		ui_service->update();
+		if (GameService::getGameState() == GameState::GAMEPLAY)
+		{
+			player_service->update();
+		}
 	}
+
 
 	void ServiceLocator::render()
 	{
 		graphic_service->render();
 		ui_service->render();
+		if (GameService::getGameState() == GameState::GAMEPLAY)
+		{
+			player_service->render();
+		}
 	}
 
 	void ServiceLocator::clearAllServices()

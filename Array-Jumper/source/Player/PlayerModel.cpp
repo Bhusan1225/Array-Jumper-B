@@ -4,8 +4,14 @@
 namespace Player
 {
 
-
+	
 	PlayerModel::PlayerModel() :current_position(0){} //here initialize the position 0
+
+
+	void PlayerModel::initialize()
+	{
+
+	}
 
 	int PlayerModel::getPlayerPosition() //get the player health 
 	{
