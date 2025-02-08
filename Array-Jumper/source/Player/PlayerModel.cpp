@@ -10,7 +10,7 @@ namespace Player
 
 	void PlayerModel::initialize()
 	{
-
+		player_state = PlayerState::ALIVE;
 	}
 
 	int PlayerModel::getPlayerPosition() //get the player health 
