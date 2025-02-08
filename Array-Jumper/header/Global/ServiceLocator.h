@@ -4,6 +4,8 @@
 #include "../../header/UI/UIService.h"
 #include "../../header/Sound/SoundService.h"
 #include "..//../header/Player/PlayerService.h"
+#include "..//../header/Level/LevelService.h"
+
 namespace Global
 {
     class ServiceLocator
@@ -14,7 +16,7 @@ namespace Global
         Sound::SoundService* sound_service;
         UI::UIService* ui_service;
         Player::PlayerService* player_service;//--------------added the player services (bhusan)
-
+        Level::LevelService* level_service;//--------------added (bhusan)
         ~ServiceLocator();
 
         void createServices();
@@ -33,5 +35,10 @@ namespace Global
         Sound::SoundService* getSoundService();
         UI::UIService* getUIService();
         Player::PlayerService* getPlayerService();//--------------------- added getter methord (bhusan)
+        Level::LevelService* getLevel_service();  //--------------------- added getter methord (bhusan)
+
+
     };
+
+
 }

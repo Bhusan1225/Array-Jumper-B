@@ -11,6 +11,7 @@ namespace Global
 	using namespace UI;
 	using namespace Main;
 	using namespace Player; //--------------------  added (bhusan)
+	using namespace Level;  //--------------------  added (bhusan)
 
 	ServiceLocator::ServiceLocator()
 	{
@@ -18,7 +19,8 @@ namespace Global
 		event_service = nullptr;
 		sound_service = nullptr;
 		ui_service = nullptr;
-		player_service = nullptr;
+		player_service = nullptr; //--------------------  added (bhusan)
+		level_service = nullptr;  //--------------------  added (bhusan)
 
 		createServices();
 	}
@@ -31,7 +33,8 @@ namespace Global
 		event_service = new EventService();
 		sound_service = new SoundService();
 		ui_service = new UIService();
-		player_service = new PlayerService();
+		player_service = new PlayerService();//--------------------  added (bhusan)
+		level_service = new LevelService();  //--------------------  added (bhusan)
 	}
 
 	void ServiceLocator::initialize()
@@ -40,7 +43,8 @@ namespace Global
 		event_service->initialize();
 		sound_service->initialize();
 		ui_service->initialize();
-		player_service->initialize();
+		player_service->initialize(); //--------------------  added (bhusan)
+		level_service->intialize();    //--------------------  added (bhusan)
 	}
 
 	void ServiceLocator::update()
@@ -48,8 +52,9 @@ namespace Global
 		graphic_service->update();
 		event_service->update();
 		ui_service->update();
-		if (GameService::getGameState() == GameState::GAMEPLAY)
+		if (GameService::getGameState() == GameState::GAMEPLAY) //--------------------  added (bhusan)
 		{
+			level_service->update();
 			player_service->update();
 		}
 	}
@@ -59,8 +64,9 @@ namespace Global
 	{
 		graphic_service->render();
 		ui_service->render();
-		if (GameService::getGameState() == GameState::GAMEPLAY)
+		if (GameService::getGameState() == GameState::GAMEPLAY) //--------------------  added (bhusan)
 		{
+			level_service->render();
 			player_service->render();
 		}
 	}
@@ -71,7 +77,9 @@ namespace Global
 		delete(event_service);
 		delete(sound_service);
 		delete(ui_service);
-		delete(player_service);
+		delete(player_service); //--------------------  added (bhusan)
+		delete(level_service); //--------------------  added (bhusan)
+
 	}
 
 	ServiceLocator* ServiceLocator::getInstance()
@@ -88,5 +96,7 @@ namespace Global
 
 	UIService* ServiceLocator::getUIService() { return ui_service; }
 
-	PlayerService* ServiceLocator::getPlayerService() { return player_service; }
+	PlayerService* ServiceLocator::getPlayerService() { return player_service; }   //--------------------  added (bhusan)
+
+	LevelService* ServiceLocator::getLevel_service() { return level_service; }     //--------------------  added (bhusan)
 }
