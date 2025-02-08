@@ -19,11 +19,11 @@ namespace Player
 		PlayerModel();
 
 		int getPlayerPosition(); //getter
-		void setPlayerPosition(int & newPosition); //setter - set the player position
+		void setPlayerPosition(int  new_Position); //setter - set the player position
 
 
 		PlayerState getPlayerState();
-		void setPlayerState(PlayerState& newState);
+		void setPlayerState(PlayerState new_State);
 
 
 	};
