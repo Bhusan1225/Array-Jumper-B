@@ -67,7 +67,7 @@ namespace Global
 		if (GameService::getGameState() == GameState::GAMEPLAY) //--------------------  added (bhusan)
 		{
 			level_service->render();
-			player_service->render();
+			//player_service->render();
 		}
 	}
 

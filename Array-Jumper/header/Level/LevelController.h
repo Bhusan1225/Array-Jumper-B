@@ -15,6 +15,8 @@ namespace Level
 		LevelView* level_view;
 		LevelModel* level_model;
 
+		LevelData current_level_data;
+
 	public:
 		LevelController();
 		~LevelController();
@@ -22,5 +24,6 @@ namespace Level
 		void initialize();
 		void update();
 		void render();
+		BlockType getCurrentBoxValue(int currentPosition);
 	};
 }
