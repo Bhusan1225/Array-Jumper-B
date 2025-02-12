@@ -1,7 +1,6 @@
 #pragma once
 
 #include "LevelModel.h"
-//#include "LevelController.h"
 #include "../../header/UI/UIElement/ImageView.h"
 
 
@@ -47,8 +46,9 @@ namespace Level
 
 		void drawBox(sf::Vector2f position);
 		void drawBoxValue(sf::Vector2f position, BlockType box_value);
-
-		
+		void calculateBoxWidthHeight();
+		void calculateBoxSpacing();
+		sf::Vector2f calculateBoxPosition(int index);
 
 	public:
 		LevelView(LevelController* controller);
