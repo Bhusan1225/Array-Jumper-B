@@ -1,12 +1,16 @@
 #pragma once
 
-#include "LevelController.h"
+#include "LevelModel.h"
+//#include "LevelController.h"
 #include "../../header/UI/UIElement/ImageView.h"
 
 
 namespace Level
 {
 	
+	
+	class LevelController;
+
 	class LevelView
 	{
 	private:
@@ -39,10 +43,12 @@ namespace Level
 		void deleteImages();
 		void calculateBoxDimensions();
 
-		ImageView* getBoxOverlayImage(BlockType block_type);
+		UI::UIElement::ImageView* getBoxOverlayImage(BlockType block_type);
 
 		void drawBox(sf::Vector2f position);
 		void drawBoxValue(sf::Vector2f position, BlockType box_value);
+
+		
 
 	public:
 		LevelView(LevelController* controller);

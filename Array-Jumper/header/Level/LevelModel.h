@@ -1,8 +1,4 @@
 #pragma once
-
-
-
-#pragma once
 #include "LevelData.h"
 
 namespace Level

@@ -1,6 +1,7 @@
 #include "../../header/Level/LevelView.h"
 #include "../../header/Global/ServiceLocator.h"
 #include "../../header/Global/Config.h"
+#include "../../header/Level/LevelController.h"
 
 namespace Level
 {
@@ -14,6 +15,8 @@ namespace Level
 		level_controller = controller;
 		createImages();
 	}
+
+
 
 	LevelView::~LevelView()
 	{
@@ -46,6 +49,13 @@ namespace Level
 	{
 		background_image = new ImageView();
 		box_image = new ImageView();
+
+		target_overlay_image = new ImageView();
+		letter_one_overlay_image = new ImageView();
+		letter_two_overlay_image = new ImageView();
+		letter_three_overlay_image = new ImageView();
+		obstacle_one_overlay_image = new ImageView();
+		obstacle_two_overlay_image = new ImageView();
 	}
 
 	void LevelView::initializeImages()//------------------------------helping initialize();
@@ -78,11 +88,7 @@ namespace Level
 		obstacle_two_overlay_image->update();
 	}
 
-	void LevelView::drawLevel()//-------------------------------------helping render();
-	{
-		background_image->render();
-		//box_image->render();
-	}
+	
 
 	void LevelView::drawBox(sf::Vector2f position)
 	{

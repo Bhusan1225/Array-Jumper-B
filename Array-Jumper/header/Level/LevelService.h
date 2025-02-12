@@ -1,8 +1,10 @@
 #pragma once
+#include "BlockType.h"
 
 namespace Level
 {
-	class LevelController;
+	class LevelController;// forward declaration
+	struct BoxDimensions; //forward declaration
 
 	class LevelService
 	{
@@ -17,6 +19,9 @@ namespace Level
 		void intialize();
 		void update();
 		void render();
+
+		BoxDimensions getBoxDimensions();
+		BlockType getCurrentBoxValue(int currentPosition);
 	};
 }
 
