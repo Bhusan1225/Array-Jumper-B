@@ -33,8 +33,9 @@ namespace Global
 		event_service = new EventService();
 		sound_service = new SoundService();
 		ui_service = new UIService();
+		level_service = new LevelService();
 		player_service = new PlayerService();//--------------------  added (bhusan)
-		level_service = new LevelService();  //--------------------  added (bhusan)
+		  
 	}
 
 	void ServiceLocator::initialize()
@@ -43,8 +44,9 @@ namespace Global
 		event_service->initialize();
 		sound_service->initialize();
 		ui_service->initialize();
+		level_service->intialize();
 		player_service->initialize(); //--------------------  added (bhusan)
-		level_service->intialize();    //--------------------  added (bhusan)
+		  
 	}
 
 	void ServiceLocator::update()
