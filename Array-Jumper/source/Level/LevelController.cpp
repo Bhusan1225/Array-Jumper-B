@@ -1,6 +1,7 @@
 #include "../../header/Level/LevelController.h"
 #include "../../header/Level/LevelView.h"
 #include "../../header/Level/LevelModel.h"
+#include "../../header/Level/LevelData.h"
 
 namespace Level
 {
@@ -33,5 +34,11 @@ namespace Level
 		return current_level_data.level_boxes[currentPosition];
 	}
 
+
+	BoxDimensions LevelController::getBoxDimensions() 
+	{
+
+		return level_view->getBoxDimensions();
+	}
 
 }

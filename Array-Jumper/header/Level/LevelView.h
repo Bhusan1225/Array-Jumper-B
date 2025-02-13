@@ -33,7 +33,7 @@ namespace Level
 		UI::UIElement::ImageView* letter_three_overlay_image;
 		UI::UIElement::ImageView* obstacle_one_overlay_image;
 		UI::UIElement::ImageView* obstacle_two_overlay_image;
-
+	
 		
 		void createImages();
 		void initializeImages();
@@ -49,6 +49,7 @@ namespace Level
 		void calculateBoxWidthHeight();
 		void calculateBoxSpacing();
 		sf::Vector2f calculateBoxPosition(int index);
+		
 
 	public:
 		LevelView(LevelController* controller);
@@ -57,6 +58,8 @@ namespace Level
 		void initialize();
 		void update();
 		void render();
+
+		BoxDimensions getBoxDimensions();
 	};
 }
 

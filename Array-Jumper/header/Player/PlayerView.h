@@ -1,4 +1,5 @@
 #pragma once
+#include "../../header/Level/LevelModel.h"
 #include "../../header/UI/UIElement/ImageView.h"
 
 
@@ -25,7 +26,9 @@ namespace Player
 		
 		void updatePlayerPosition();
 		sf::Vector2f calculatePlayerPosition();
+		//void CalculatePlayerDimensions();
 
+		Level::BoxDimensions current_box_dimensions;
 
 	public:
 		//lifecycle methords
@@ -35,7 +38,8 @@ namespace Player
 		void initialize();
 		void update();
 		void render();
-
+		
+	
 
 
 

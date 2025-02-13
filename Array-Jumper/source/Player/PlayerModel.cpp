@@ -5,7 +5,7 @@ namespace Player
 {
 
 	
-	PlayerModel::PlayerModel() :current_position(0){} //here initialize the position 0
+	//PlayerModel::PlayerModel() :current_position(0){} //here initialize the position 0
 
 
 	void PlayerModel::initialize()
@@ -13,12 +13,9 @@ namespace Player
 		player_state = PlayerState::ALIVE;
 	}
 
-	int PlayerModel::getPlayerPosition() //get the player health 
-	{
-		return current_position;
-	}
 
-	void PlayerModel::setPlayerPosition(int new_Position) //set the player health
+
+	void PlayerModel::setCurrentPosition(int new_Position)
 	{
 		current_position = new_Position;
 	}
@@ -36,4 +33,5 @@ namespace Player
 
 	}
 
+	int PlayerModel::getCurrentPosition() { return current_position; }
 }

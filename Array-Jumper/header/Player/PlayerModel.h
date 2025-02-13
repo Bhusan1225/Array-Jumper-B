@@ -6,7 +6,8 @@ namespace Player
 
 	enum class PlayerState 
 	{
-		ALIVE, DEAD
+		ALIVE, 
+		DEAD
 	};
 
 	class PlayerModel
@@ -17,15 +18,20 @@ namespace Player
 
 
 	public:
-		PlayerModel();
 		void initialize();
-		int getPlayerPosition(); //getter
-		void setPlayerPosition(int  new_Position); //setter - set the player position
-
 
 		PlayerState getPlayerState();
-		void setPlayerState(PlayerState new_State);
+		void setPlayerState(PlayerState new_player_state);
 
+		/*void resetPlayer();
+		void resetPosition();*/
+		
+		int getCurrentPosition();
+		void setCurrentPosition(int new_position);
+		
+		/*void decreamentLife();
+		int getCurrentLives();*/
+		
 
 	};
 

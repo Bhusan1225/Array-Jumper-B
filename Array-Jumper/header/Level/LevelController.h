@@ -1,6 +1,6 @@
 #pragma once
-//#include "LevelModel.h"
-#include "LevelData.h"
+#include "LevelModel.h" // i added as it is solving the errors
+//#include "LevelData.h"
 
 namespace Level
 {
@@ -25,6 +25,10 @@ namespace Level
 		void initialize();
 		void update();
 		void render();
+		
 		BlockType getCurrentBoxValue(int currentPosition);
+		BoxDimensions getBoxDimensions();
+
+
 	};
 }

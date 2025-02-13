@@ -35,7 +35,7 @@ namespace Global
         Sound::SoundService* getSoundService();
         UI::UIService* getUIService();
         Player::PlayerService* getPlayerService();//--------------------- added getter methord (bhusan)
-        Level::LevelService* getLevel_service();  //--------------------- added getter methord (bhusan)
+        Level::LevelService* getLevelService();  //--------------------- added getter methord (bhusan)
 
 
     };
