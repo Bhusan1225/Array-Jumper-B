@@ -33,7 +33,7 @@ namespace Global
 		event_service = new EventService();
 		sound_service = new SoundService();
 		ui_service = new UIService();
-		level_service = new LevelService();
+		level_service = new LevelService();  //--------------------  added (bhusan)
 		player_service = new PlayerService();//--------------------  added (bhusan)
 		  
 	}
@@ -44,7 +44,7 @@ namespace Global
 		event_service->initialize();
 		sound_service->initialize();
 		ui_service->initialize();
-		level_service->intialize();
+		level_service->intialize();   //--------------------  added (bhusan)
 		player_service->initialize(); //--------------------  added (bhusan)
 		  
 	}

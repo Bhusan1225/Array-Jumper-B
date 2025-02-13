@@ -1,4 +1,5 @@
 #pragma once
+#include "MovementDirection.h"
 
 
 namespace Player
@@ -14,6 +15,8 @@ namespace Player
 
 		PlayerModel* player_model;
 		PlayerView* player_view;
+		
+		Event::EventService* event_service;
 
 		void destroy();
 	public:
@@ -27,6 +30,9 @@ namespace Player
 		PlayerState getPlayerState();
 		void setPlayerState(PlayerState new_player_state);
 		int getCurrentPosition();
+		void move(MovementDirection direction);
+		void readInput();
+		bool isPositionInBound(int targetPosition);
 	};
 }
 
