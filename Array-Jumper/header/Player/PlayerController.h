@@ -1,4 +1,5 @@
 #pragma once
+#include "../../header/Event/EventService.h"
 #include "MovementDirection.h"
 
 
@@ -33,6 +34,7 @@ namespace Player
 		void move(MovementDirection direction);
 		void readInput();
 		bool isPositionInBound(int targetPosition);
+		void jump(MovementDirection direction);
 	};
 }
 
