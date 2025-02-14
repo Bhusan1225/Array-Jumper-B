@@ -160,6 +160,11 @@ namespace Player
 		ServiceLocator::getInstance()->getGameplayService()->onDeath();
 		player_model->resetPlayer();
 	}
+
+	int PlayerController::getCurrentLives()
+	{
+		return player_model->getCurrentLives();
+	}
 }
 
 
