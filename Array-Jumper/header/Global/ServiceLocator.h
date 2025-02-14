@@ -5,6 +5,7 @@
 #include "../../header/Sound/SoundService.h"
 #include "..//../header/Player/PlayerService.h"
 #include "..//../header/Level/LevelService.h"
+#include "..//../header/Gameplay/GameplayService.h"
 
 namespace Global
 {
@@ -15,8 +16,10 @@ namespace Global
         Event::EventService* event_service;
         Sound::SoundService* sound_service;
         UI::UIService* ui_service;
-        Player::PlayerService* player_service;//--------------added the player services (bhusan)
-        Level::LevelService* level_service;//--------------added (bhusan)
+        Player::PlayerService* player_service;   //--------------added the player services (bhusan)
+        Level::LevelService* level_service;      //--------------added (bhusan)
+        Gameplay::GameplayService* gameplay_service; //--------------added (bhusan)
+
         ~ServiceLocator();
 
         void createServices();
@@ -34,9 +37,9 @@ namespace Global
         Event::EventService* getEventService();
         Sound::SoundService* getSoundService();
         UI::UIService* getUIService();
-        Player::PlayerService* getPlayerService();//--------------------- added getter methord (bhusan)
-        Level::LevelService* getLevelService();  //--------------------- added getter methord (bhusan)
-
+        Player::PlayerService* getPlayerService();       //--------------------- added getter methord (bhusan)
+        Level::LevelService* getLevelService();         //--------------------- added getter methord (bhusan)
+        Gameplay::GameplayService* getGameplayService();   //--------------------- added getter methord (bhusan)
 
     };
 

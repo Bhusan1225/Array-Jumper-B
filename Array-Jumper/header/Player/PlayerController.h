@@ -37,6 +37,7 @@ namespace Player
 		void jump(MovementDirection direction);
 		void takeDamage();
 		void resetPlayer();
+		void onDeath();
 	};
 }
 

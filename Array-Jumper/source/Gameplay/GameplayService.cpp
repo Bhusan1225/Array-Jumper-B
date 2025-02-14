@@ -9,9 +9,9 @@ namespace Gameplay
 	void GameplayService::update() { gameplay_controller->update(); }
 	void GameplayService::render() { gameplay_controller->render(); }
 
-	//void GameplayService::onPositionChanged(int position) { gameplay_controller->onPositionChanged(position); }
+	void GameplayService::onPositionChanged(int position) { gameplay_controller->onPositionChanged(position); }
 
-	//void GameplayService::onDeath() { gameplay_controller->onDeath(); }
+	void GameplayService::onDeath() { gameplay_controller->onDeath(); }
 
 	void GameplayService::destroy() { delete(gameplay_controller); }
 }
