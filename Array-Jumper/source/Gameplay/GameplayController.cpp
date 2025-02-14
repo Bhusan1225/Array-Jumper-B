@@ -29,8 +29,7 @@ namespace Gameplay
 
 		if (isObstacle(value))
 			processObstacle();
-		if (isEndBlock(value))
-			processEndBlock();
+		
 	}
 
 	void GameplayController::onDeath()
@@ -38,19 +37,34 @@ namespace Gameplay
 		gameOver();
 	}
 
-	/*bool GameplayController::isObstacle(Level::BlockType value)
+	bool GameplayController::isObstacle(Level::BlockType value)
 	{
 		if (value == BlockType::OBSTACLE_ONE || value == BlockType::OBSTACLE_TWO)
+		{
 			return true;
-		return false;
+
+		}
+		else
+		{
+			return false;
+		}
+			
+		
 	}
 
 	bool GameplayController::isEndBlock(Level::BlockType value)
 	{
-		if (value == BlockType::TARGET)
+		if (value == BlockType::TARGET) 
+		{
 			return true;
-		return false;
-	}*/
+		}
+		else 
+		{
+			return false;
+		}
+			
+		
+	}
 
 	void GameplayController::processObstacle()
 	{
@@ -58,12 +72,12 @@ namespace Gameplay
 		ServiceLocator::getInstance()->getSoundService()->playSound(SoundType::DEATH);
 	}
 
-	void GameplayController::processEndBlock()
-	{
-		ServiceLocator::getInstance()->getPlayerService()->levelComplete();
-		ServiceLocator::getInstance()->getSoundService()->playSound(SoundType::LEVEL_COMPLETE);
-		GameService::setGameState(GameState::CREDITS);
-	}
+	//void GameplayController::processEndBlock()
+	//{
+	//	ServiceLocator::getInstance()->getPlayerService()->levelComplete();
+	//	ServiceLocator::getInstance()->getSoundService()->playSound(SoundType::LEVEL_COMPLETE);
+	//	GameService::setGameState(GameState::CREDITS);
+	//}
 
 	void GameplayController::gameOver()
 	{
