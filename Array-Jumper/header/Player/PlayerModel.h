@@ -23,8 +23,8 @@ namespace Player
 		PlayerState getPlayerState();
 		void setPlayerState(PlayerState new_player_state);
 
-		/*void resetPlayer();
-		void resetPosition();*/
+		void resetPlayer();
+		//void resetPosition();
 		
 		int getCurrentPosition();
 		void setCurrentPosition(int new_position);

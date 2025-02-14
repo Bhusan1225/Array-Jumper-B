@@ -28,4 +28,9 @@ namespace Player
 
 	
 	void PlayerService::destroy() { delete(player_controller); }
+
+	void PlayerService::takeDamage()
+	{
+		player_controller->takeDamage();
+	}
 }

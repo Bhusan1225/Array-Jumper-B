@@ -34,4 +34,10 @@ namespace Player
 	}
 
 	int PlayerModel::getCurrentPosition() { return current_position; }
+
+	void PlayerModel::resetPlayer()
+	{
+		current_position = 0;
+		player_state = PlayerState::ALIVE;
+	}
 }

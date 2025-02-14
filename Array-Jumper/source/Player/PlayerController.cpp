@@ -32,6 +32,7 @@ namespace Player
 	void PlayerController::update()
 	{
 		player_view->update();
+		readInput();
 	}
 
 	void PlayerController::render()
@@ -138,6 +139,11 @@ namespace Player
 
 		player_model->setCurrentPosition(targetPosition);
 		ServiceLocator::getInstance()->getSoundService()->playSound(SoundType::JUMP);
+	}
+
+	void PlayerController::takeDamage()
+	{
+		player_model->resetPlayer();
 	}
 }
 
