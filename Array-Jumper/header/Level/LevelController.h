@@ -1,22 +1,16 @@
 #pragma once
-#include "LevelModel.h" // i added as it is solving the errors
-//#include "LevelData.h"
+#include "LevelModel.h"
 
 namespace Level
 {
-	class LevelView; //forward declaration
-	class LevelModel;// forward declaration
+	class LevelView;
+	class LevelModel;
 
-	
-	
-	
 	class LevelController
 	{
 	private:
 		LevelView* level_view;
 		LevelModel* level_model;
-
-		LevelData current_level_data;
 
 	public:
 		LevelController();
@@ -25,10 +19,13 @@ namespace Level
 		void initialize();
 		void update();
 		void render();
-		
-		BlockType getCurrentBoxValue(int currentPosition);
+
 		BoxDimensions getBoxDimensions();
+		BlockType getCurrentBoxValue(int currentPosition);
+		bool isLastLevel();
+		void loadNextLevel();
+		int getCurrentLevelNumber();
 
-
+		void reset();
 	};
 }
