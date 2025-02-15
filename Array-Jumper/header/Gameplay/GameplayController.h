@@ -22,5 +22,9 @@ namespace Gameplay
 
 		void onPositionChanged(int position);
 		void onDeath();
+
+		void gameWon();
+		bool isLastLevel();
+		void loadNextLevel();
 	};
 }
